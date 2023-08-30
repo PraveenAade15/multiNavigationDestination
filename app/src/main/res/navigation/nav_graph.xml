@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/destination0Fragment">
+
+    <fragment
+        android:id="@+id/destination0Fragment"
+        android:name="com.example.multidestination.Destination0Fragment"
+        android:label="fragment_destination0"
+        tools:layout="@layout/fragment_destination0" >
+        <action
+            android:id="@+id/action_destination0Fragment_to_zeroForOneFragment"
+            app:destination="@id/zeroForOneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/destination1Fragment"
+        android:name="com.example.multidestination.Destination1Fragment"
+        android:label="fragment_destination1"
+        tools:layout="@layout/fragment_destination1" >
+        <action
+            android:id="@+id/action_destination1Fragment_to_oneForOneFragment"
+            app:destination="@id/oneForOneFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_to_destination_0"
+        app:destination="@id/destination0Fragment" />
+
+    <action
+        android:id="@+id/action_to_destination_1"
+        app:destination="@id/destination1Fragment" />
+    <fragment
+        android:id="@+id/oneForOneFragment"
+        android:name="com.example.multidestination.OneForOneFragment"
+        android:label="fragment_one_for_one"
+        tools:layout="@layout/fragment_one_for_one" >
+        <action
+            android:id="@+id/action_oneForOneFragment_to_oneForTwoFragment"
+            app:destination="@id/oneForTwoFragment" />
+        <action
+            android:id="@+id/action_oneForOneFragment_to_oneForTwoFragment2"
+            app:destination="@id/oneForTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/oneForTwoFragment"
+        android:name="com.example.multidestination.OneForTwoFragment"
+        android:label="fragment_one_for_two"
+        tools:layout="@layout/fragment_one_for_two" />
+    <fragment
+        android:id="@+id/zeroForOneFragment"
+        android:name="com.example.multidestination.ZeroForOneFragment"
+        android:label="fragment_zero_for_one"
+        tools:layout="@layout/fragment_zero_for_one" >
+        <action
+            android:id="@+id/action_zeroForOneFragment_to_zeroForTwoFragment"
+            app:destination="@id/zeroForTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/zeroForTwoFragment"
+        android:name="com.example.multidestination.ZeroForTwoFragment"
+        android:label="fragment_zero_for_two"
+        tools:layout="@layout/fragment_zero_for_two" />
+</navigation>
